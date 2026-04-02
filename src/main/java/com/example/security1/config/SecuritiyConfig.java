@@ -24,7 +24,7 @@ public class SecuritiyConfig{
 
             //권한
         .authorizeHttpRequests(auth -> auth
-            .requestMatchers("/user/**").authenticated()   // /user/** 접근시 인증 필요 인증만 되면 들어갈수 있는 주소
+            .requestMatchers("/user/**").authenticated()   // /user/** 접근시 인증 필요 인증만 되면 들어갈수 있는 주
             .requestMatchers("/manager/**").hasAnyRole("ADMIN","MANAGER")
             .requestMatchers("/admin/**").hasAnyRole("ADMIN")
             .anyRequest().permitAll()
